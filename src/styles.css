@@ -1,1 +1,140 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+strong{
+  font-weight: 500;
+}
+
+.main-content {
+  font-family: "Poppins", sans-serif;
+  margin-left: 300px;
+  margin-top: 50px;
+  padding: 2rem 2rem;
+}
+.main-content > h2{
+  margin-bottom: 40px;
+}
+.main-content > h4{
+  margin-bottom: 10px;
+}
+.main-content > p{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color:#000;
+  font-weight: 300;
+}
+.main-content > ul > li{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color:#000;
+  font-weight: 300;
+}
+
+.main-content > ol > li{
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  color:#000;
+  font-weight: 300;
+}
+
+.divider{
+  height: 40px;
+}
+.code-snippet {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 5px;
+  font-family: monospace;
+}
+.code-snippet1 {
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.jumpnav {
+  padding-left: 20px;
+  padding-top: 20px;
+  position: fixed;
+  top: 65px;
+  right:20px;
+  max-width: 200px;
+  font-size: 0.9rem;
+  border-left: 1px solid #dadada;
+}
+
+.jumpnav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.jumpnav li {
+  margin-bottom: 12px;
+}
+
+.jumpnav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 300;
+  transition: color 0.2s;
+}
+
+.jumpnav a:hover {
+  color: #084298;
+}
+.course-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-top: 1px solid #eaeaea;
+}
+
+.course-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #000000;
+  transition: color 0.2s ease;
+}
+
+.course-nav a:hover {
+  color: #084298;
+}
+
+.prev-link {
+  text-align: left;
+
+}
+.pre{
+  margin-left: 300px;
+}
+
+.next-link {
+  text-align: right;
+}
+.btm-nav > p{
+  Margin-bottom: 0px !important;
+  color: #787878;
+}
+
+

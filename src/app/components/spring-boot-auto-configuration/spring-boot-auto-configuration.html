@@ -1,0 +1,70 @@
+<!-- Main Content -->
+<main class="main-content">
+  <h2 id="spring-boot">Spring Boot Auto-Configuration</h2>
+  <hr>
+  <p>Spring Boot’s Auto-Configuration simplifies application setup by automatically configuring components based on the classpath, beans, and properties. It eliminates the need for extensive manual configuration, making development faster and reducing boilerplate code.</p>
+  <p>Auto-configuration works through <span class="code-snippet1">&#64;EnableAutoConfiguration,</span> which scans dependencies and provides sensible defaults. Developers can override these defaults using properties in <span class="code-snippet1">application.yml or application.properties,</span> or by defining custom beans.</p>
+  <div class="divider"></div>
+  <h5 id="commonly-used" >Commonly Used Auto-Configuration Classes</h5>
+  <ul>
+    <li><strong>DataSourceAutoConfiguration</strong> - Configures a DataSource bean automatically if a database driver (e.g., HikariCP) is on the classpath.</li>
+    <li><strong>JpaRepositoriesAutoConfiguration</strong> - Enables Spring Data JPA repositories when Spring Data JPA is detected.</li>
+    <li><strong>JacksonAutoConfiguration</strong> - Configures Jackson JSON processing, including <span class="code-snippet1">ObjectMapper</span>.</li>
+    <li><strong>WebMvcAutoConfiguration</strong> - Sets up Spring MVC with DispatcherServlet, <span class="code-snippet1">ViewResolvers,</span> and <span class="code-snippet1">MessageConverters.</span></li>
+    <li><strong>SecurityAutoConfiguration</strong> - Configures Spring Security defaults, including a basic authentication mechanism.</li>
+    <li><strong>CacheAutoConfiguration</strong> - Enables caching support when a caching library (e.g., EhCache, Redis) is present.</li>
+    <li><strong>RabbitAutoConfiguration</strong> - Configures RabbitMQ integration if <span class="code-snippet1">spring-rabbit</span> is found in dependencies.</li>
+    <li><strong>KafkaAutoConfiguration</strong> - Enables Apache Kafka messaging support if the <span class="code-snippet1">spring-kafka</span> library is included.</li>
+    <li><strong>ActuatorAutoConfiguration</strong> - Configures Spring Boot Actuator endpoints for monitoring (health, metrics, etc.).</li>
+    <li><strong>TaskExecutionAutoConfiguration</strong> - Configures asynchronous execution and a thread pool for <span class="code-snippet1">&#64;Async</span> tasks.</li>
+  </ul>
+  <div class="divider"></div>
+  <h5 id="disabling-auto">Disabling Auto-Configuration</h5>
+  <p>Spring Boot allows disabling specific auto-configurations using <span class="code-snippet1">spring.autoconfigure.exclude</span> in application properties or using the <span class="code-snippet1">&#64;EnableAutoConfiguration(exclude = ...)</span>  annotation.</p>
+  <h6>Example: Disabling AWS CloudWatch Metrics Auto-Configuration in Dev</h6>
+  <ol>
+    <li>Using <span class="code-snippet1">application-dev.properties</span><br>Add the following to your application-dev.properties file:<br><br><div class="code-snippet">spring.autoconfigure.exclude=io.micrometer.cloudwatch2.CloudWatchConfig, io.micrometer.cloudwatch2.CloudWatchMeterRegistry</div><br></li>
+    <li>Using <span class="code-snippet1">&#64;EnableAutoConfiguration</span><br> in Java
+      You can also disable CloudWatch auto-configuration at the class level:<br><br>
+
+      <div class="code-snippet">&#64;SpringBootApplication(exclude = &#123;<br>
+        &nbsp;&nbsp;io.micrometer.cloudwatch2.CloudWatchConfig.class,<br>
+        &nbsp;&nbsp;io.micrometer.cloudwatch2.CloudWatchMeterRegistry.class<br>
+        &#125;)<br>
+        &nbsp;&nbsp;public class MyApplication &#123;<br>
+        &nbsp;&nbsp;public static void main(String[] args) &#123;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;SpringApplication.run(MyApplication.class, args);<br>
+        &nbsp;&nbsp;&#125;<br>
+        &#125;</div> <br>
+
+      This ensures that CloudWatch metrics will not be configured when the application starts.</li>
+  </ol>
+
+</main>
+
+<nav class="jumpnav">
+  <ul>
+    <li><a [routerLink]="[]" fragment="spring-boot">Spring Boot Auto-Configuration</a></li>
+    <li><a [routerLink]="[]" fragment="commonly-used">Commonly Used Auto-Configuration Classes</a></li>
+    <li><a [routerLink]="[]" fragment="disabling-auto">Disabling Auto-Configuration</a></li>
+  </ul>
+</nav>
+
+<div class="course-nav pre">
+  <div class="btm-nav">
+    <p>← PREVIOUS</p>
+    <a routerLink="/get-started" routerLinkActive="active" class="prev-link">Get Started</a>
+  </div>
+
+  <div class="btm-nav">
+    <p>NEXT →</p>
+    <a href="#tools" class="next-link">Fundamentals</a>
+  </div>
+</div>
+
+
+
+
+
+
+
