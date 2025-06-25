@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>CleanArchCourse</title>
+  <title>Cleanarch</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -16,5 +16,46 @@
 <body>
 <app-root></app-root>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const options = { root: null, rootMargin: "0px", threshold: 0.5 };
+
+    const animateCounter = (entry) => {
+      const counter = entry.target;
+      if (counter.dataset.animated) return;
+
+      counter.dataset.animated = true;
+      let start = 0;
+      const isDecimal = counter.dataset.decimal;
+      const end = parseFloat(counter.dataset.target);
+      const duration = 2000;
+      const increment = end / (duration / 50);
+
+      let current = 0;
+      const timer = setInterval(function(){
+        current += increment;
+        if (current >= end) {
+          current = end;
+          clearInterval(timer);
+        }
+        counter.textContent = isDecimal ? current.toFixed(1) : Math.round(current);
+      }, 50);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry);
+        }
+      });
+    }, options);
+
+    counters.forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </html>

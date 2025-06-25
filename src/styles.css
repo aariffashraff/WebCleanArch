@@ -1,140 +1,110 @@
 /* You can add global styles to this file, and also import other style files */
-body {
+
+.poppins-thin {
   font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
 }
 
-html {
-  scroll-behavior: smooth;
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
-strong{
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
+  font-style: normal;
 }
 
-.main-content {
+.poppins-semibold {
   font-family: "Poppins", sans-serif;
-  margin-left: 300px;
-  margin-top: 50px;
-  padding: 2rem 2rem;
+  font-weight: 600;
+  font-style: normal;
 }
-.main-content > h2{
-  margin-bottom: 40px;
-}
-.main-content > h4{
-  margin-bottom: 10px;
-}
-.main-content > p{
+
+.poppins-bold {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  color:#000;
-  font-weight: 300;
+  font-weight: 700;
+  font-style: normal;
 }
-.main-content > ul > li{
+
+.poppins-extrabold {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  color:#000;
-  font-weight: 300;
+  font-weight: 800;
+  font-style: normal;
 }
 
-.main-content > ol > li{
+.poppins-black {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  line-height: 24px;
-  color:#000;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
+  font-style: italic;
 }
 
-.divider{
-  height: 40px;
-}
-.code-snippet {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  border-radius: 5px;
-  font-family: monospace;
-}
-.code-snippet1 {
-  border-radius: 5px;
-  font-family: monospace;
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.content-wrapper {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  position: relative;
-}
-
-.main-content {
-  flex: 1;
-  max-width: 60%;
-}
-
-.jumpnav {
-  padding-left: 20px;
-  padding-top: 20px;
-  position: fixed;
-  top: 65px;
-  right:20px;
-  max-width: 200px;
-  font-size: 0.9rem;
-  border-left: 1px solid #dadada;
-}
-
-.jumpnav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.jumpnav li {
-  margin-bottom: 12px;
-}
-
-.jumpnav a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: 300;
-  transition: color 0.2s;
-}
-
-.jumpnav a:hover {
-  color: #084298;
-}
-.course-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  border-top: 1px solid #eaeaea;
-}
-
-.course-nav a {
-  text-decoration: none;
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
-  color: #000000;
-  transition: color 0.2s ease;
+  font-style: italic;
 }
 
-.course-nav a:hover {
-  color: #084298;
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
 }
 
-.prev-link {
-  text-align: left;
-
-}
-.pre{
-  margin-left: 300px;
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
 }
 
-.next-link {
-  text-align: right;
-}
-.btm-nav > p{
-  Margin-bottom: 0px !important;
-  color: #787878;
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
 }
 
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
 

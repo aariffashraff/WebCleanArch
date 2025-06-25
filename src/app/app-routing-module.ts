@@ -1,22 +1,14 @@
 import { NgModule } from '@angular/core';
-import {ExtraOptions, RouterModule, Routes} from '@angular/router';
-import {GetStarted} from './components/get-started/get-started';
-import {SpringBootAutoConfiguration} from './components/spring-boot-auto-configuration/spring-boot-auto-configuration';
+import { RouterModule, Routes } from '@angular/router';
+import {Home} from './components/home/home';
 
 const routes: Routes = [
-  {path:'get-started' , component:GetStarted},
-  {path:'spring-boot-auto-configuration' , component:SpringBootAutoConfiguration},
-  { path: '', redirectTo: '/format', pathMatch: 'full' }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path:'home' , component : Home}
 ];
 
-const routerOptions: ExtraOptions = {
-  anchorScrolling: 'enabled',
-  scrollPositionRestoration: 'enabled',
-};
-
 @NgModule({
-  imports: [RouterModule.forRoot(routes, routerOptions)],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-
 export class AppRoutingModule { }

@@ -3,20 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { GetStarted } from './components/get-started/get-started';
-import {NgOptimizedImage} from '@angular/common';
-import { SpringBootAutoConfiguration } from './components/spring-boot-auto-configuration/spring-boot-auto-configuration';
+import { Home } from './components/home/home';
 
 @NgModule({
   declarations: [
     App,
-    GetStarted,
-    SpringBootAutoConfiguration
+    Home
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgOptimizedImage
+    AppRoutingModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

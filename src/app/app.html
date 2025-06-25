@@ -6,11 +6,15 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- Top Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">
-  <div class="container-fluid px-3">
-    <a class="navbar-brand logo-text me-auto" href="#">
-      <!-- Logo -->
+
+<!-- Load Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Navbar HTML -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light py-3" style="font-family: 'Poppins', sans-serif;">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
       <svg width="141" height="21" viewBox="0 0 141 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M10.0813 15.1219C10.0813 12.338 12.338 10.0813 15.1219 10.0813H20.1625V15.1219C20.1625 17.9058 17.9058 20.1625 15.1219 20.1625V20.1625C12.338 20.1625 10.0813 17.9058 10.0813 15.1219V15.1219Z" fill="#FF7262"/>
         <rect y="10.0813" width="10.0813" height="20.1625" rx="5.04063" transform="rotate(-90 0 10.0813)" fill="#F24E1E"/>
@@ -27,260 +31,43 @@
         <path d="M122.782 17.6019C121.612 17.6019 120.571 17.3667 119.657 16.8962C118.743 16.4123 118.023 15.7469 117.499 14.9001C116.988 14.0533 116.733 13.0922 116.733 12.0169C116.733 10.9281 116.988 9.96701 117.499 9.13363C118.023 8.2868 118.743 7.62816 119.657 7.1577C120.571 6.6738 121.612 6.43185 122.782 6.43185C123.924 6.43185 124.919 6.6738 125.766 7.1577C126.613 7.62816 127.238 8.30697 127.641 9.19412L125.201 10.5047C124.919 9.9939 124.563 9.61753 124.133 9.37558C123.716 9.13363 123.259 9.01265 122.762 9.01265C122.224 9.01265 121.74 9.13363 121.31 9.37558C120.88 9.61753 120.537 9.96029 120.282 10.4039C120.04 10.8474 119.919 11.3851 119.919 12.0169C119.919 12.6486 120.04 13.1863 120.282 13.6299C120.537 14.0734 120.88 14.4162 121.31 14.6582C121.74 14.9001 122.224 15.0211 122.762 15.0211C123.259 15.0211 123.716 14.9068 124.133 14.6783C124.563 14.4364 124.919 14.0533 125.201 13.5291L127.641 14.8598C127.238 15.7335 126.613 16.4123 125.766 16.8962C124.919 17.3667 123.924 17.6019 122.782 17.6019Z" fill="black"/>
         <path d="M135.986 6.43185C136.846 6.43185 137.613 6.60659 138.285 6.95608C138.97 7.29212 139.508 7.81634 139.898 8.52875C140.287 9.22772 140.482 10.1283 140.482 11.2305V17.4406H137.337V11.7144C137.337 10.8407 137.142 10.1955 136.752 9.77883C136.376 9.36214 135.838 9.15379 135.139 9.15379C134.642 9.15379 134.192 9.26133 133.788 9.47639C133.399 9.67802 133.089 9.9939 132.861 10.424C132.646 10.8542 132.538 11.4053 132.538 12.0774V17.4406H129.393V2.48H132.538V9.59737L131.833 8.69005C132.222 7.9642 132.78 7.40637 133.506 7.01656C134.232 6.62676 135.059 6.43185 135.986 6.43185Z" fill="black"/>
       </svg>
-    </a>
-    <div class="dropdown">
-      <a
-        href="#"
-        class="d-flex align-items-center text-decoration-none text-dark dropdown-toggle"
-        id="profileDropdown"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <div class="text-end me-2">
-          <div class="fw-semibold">Arif Ashraf</div>
-        </div>
-        <i class="fas fa-user-circle fa-lg avatar"></i>
-      </a>
 
-      <ul class="dropdown-menu dropdown-menu-end shadow fade slide-in" aria-labelledby="profileDropdown">
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="/logout">
-            <i class="fas fa-sign-out-alt me-2 text-danger"></i> Logout
-          </a>
+
+    </a>
+
+    <!-- Toggle Button for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Items -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item mx-2">
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active">HOME</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link fw-medium" href="#">ABOUT US</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link fw-medium" href="#">CONTACT US</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link fw-medium" href="#">BLOG</a>
         </li>
       </ul>
+    </div>
+
+    <!-- Sign In Button -->
+    <div class="d-none d-lg-block">
+      <a href="#" class="btn btn-outline-dark rounded-pill px-4 sec-btn">Sign In / Sign Up</a>
     </div>
   </div>
 </nav>
 
-<!-- Sidebar -->
-<div class="sidebar">
-  <ul class="nav flex-column mb-3">
-    <li class="nav-item"><a class="nav-link" routerLink="/get-started" routerLinkActive="active">Getting Started</a></li>
-  </ul>
-
-  <div class="accordion" id="sidebarAccordion">
-
-    <!-- Fundamentals -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFundamentals">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFundamentals" aria-expanded="false">
-          Fundamentals
-        </button>
-      </h2>
-      <div id="collapseFundamentals" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" routerLink="/spring-boot-auto-configuration" routerLinkActive="active">Spring Boot Auto-configuration</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Spring Boot Controllers</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Spring Boot JPA</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Spring Boot Exception Handling</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">AssertJ</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Communication Patterns -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingCommunication">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCommunication" aria-expanded="false">
-          Communication Patterns
-        </button>
-      </h2>
-      <div id="collapseCommunication" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Communicating Using REST Template</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Communicating Using WebClient</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Service Discovery with Eureka & Feign</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Distributed Tracing with Zipkin</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Performance & Caching -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingPerformance">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePerformance" aria-expanded="false">
-          Performance & Caching
-        </button>
-      </h2>
-      <div id="collapsePerformance" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Caching Strategies</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">HTTP Client Connection Pooling</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Client Health Monitoring</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Using RSocket & Protocol Buffers</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Distributed Systems -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingDistributed">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDistributed" aria-expanded="false">
-          Distributed Systems
-        </button>
-      </h2>
-      <div id="collapseDistributed" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Event Publishing & Notification with RabbitMQ</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Centralized Caching</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Spring Cloud</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Rate Limiting and Circuit Breakers</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- API & Infrastructure -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingInfrastructure">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfrastructure" aria-expanded="false">
-          API & Infrastructure
-        </button>
-      </h2>
-      <div id="collapseInfrastructure" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Config Server & Centralized Configuration</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Server Configuration, Performance Tuning & Metrics</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Security & DDoS Protection with Cloudflare</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Service Level Agreements (SLAs)</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Database Strategies -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingDatabase">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDatabase" aria-expanded="false">
-          Database Strategies
-        </button>
-      </h2>
-      <div id="collapseDatabase" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Database Partitioning & Sharding</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Auditing with Envers & Debezium</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Job Scheduling with ShedLock & JobRunr</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">MySQL vs PostgreSQL</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Observability & Testing -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingObservability">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseObservability" aria-expanded="false">
-          Observability & Testing
-        </button>
-      </h2>
-      <div id="collapseObservability" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Monitoring with NewRelic, Prometheus, and Grafana</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Performance & Load Testing with Gatling</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Vulnerability Testing & Security Best Practices</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Data Plane & Control Plane Concepts</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- DevOps & Automation -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingDevOps">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDevOps" aria-expanded="false">
-          DevOps & Automation
-        </button>
-      </h2>
-      <div id="collapseDevOps" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Infrastructure as Code with Terraform</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Spinnaker, Istio & Service Mesh</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Conventional Commits & Release Management</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Advanced Architectures-->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingAdvanced">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdvanced" aria-expanded="false">
-          Advanced Architectures
-        </button>
-      </h2>
-      <div id="collapseAdvanced" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Domain-Driven Design</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">CQRS (Command Query Responsibility Segregation)</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Event Sourcing</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Migration -->
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingMigration">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMigration" aria-expanded="false">
-          Migration
-        </button>
-      </h2>
-      <div id="collapseMigration" class="accordion-collapse collapse">
-        <div class="accordion-body px-0">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#">Database Migrations & Infrastructure Changes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Infrastructure Migration Strategies</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">AWS vs GCP</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<router-outlet />
 
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
